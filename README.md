@@ -13,6 +13,17 @@ Improving Diagnostic Precision for Lower Limb Lymphedema: Suppressing Vein Signa
 - **淋巴发育分级**: 与临床分期强相关（Kappa 0.91）  
 - **动态可视化**: 对比剂时空流动展示（见 `notebooks/`）  
 
+## Lymphatic Development Grading System
+
+| Grade       | Description        | Visualization                      |
+|-------------|--------------------|------------------------------------|
+| **Grade I** | Aplasia            | ![Grade I](figures/grade_i.png)    |
+| **Grade II**| Hypoplasia         | ![Grade II](figures/grade_ii.png)  |
+| **Grade III**| Hyperplasia        | ![Grade III](figures/grade_iii.png)|
+| **Grade IV**| Severe Hyperplasia | ![Grade IV](figures/grade_iv.png)  |
+
+
+
 ## 📄 引用
 ```bibtex
 @article{yourname2024lympclear,
