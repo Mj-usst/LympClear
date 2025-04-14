@@ -22,7 +22,23 @@ Improving Diagnostic Precision for Lower Limb Lymphedema: Suppressing Vein Signa
 | **Grade III**| Hyperplasia        | ![Grade III](figures/grade_iii.png)|
 | **Grade IV**| Severe Hyperplasia | ![Grade IV](figures/grade_iv.png)  |
 
+## Lymphatic Development Grading System
 
+### Grade I: Aplasia
+![Grade I](figures/grade_i.png)  
+*图示：淋巴管发育不良（Aplasia）*
+
+### Grade II: Hypoplasia  
+![Grade II](figures/grade_ii.png)  
+*图示：淋巴管发育不全（Hypoplasia）*
+
+### Grade III: Hyperplasia  
+![Grade III](figures/grade_iii.png)  
+*图示：淋巴管增生（Hyperplasia）*
+
+### Grade IV: Severe Hyperplasia  
+![Grade IV](figures/grade_iv.png)  
+*图示：淋巴管严重增生（Severe Hyperplasia）*
 
 ## 📄 引用
 ```bibtex
