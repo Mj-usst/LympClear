@@ -25,7 +25,7 @@ Improving Diagnostic Precision for Lower Limb Lymphedema: Suppressing Vein Signa
 ## Lymphatic Development Grading System
 
 ### Grade I: Aplasia
-![Grade I](figures/grade_i.png)  
+![Grade I](zeromip_image_comparison_vein_10716_0000.nii.png)  
 *图示：淋巴管发育不良（Aplasia）*
 
 ### Grade II: Hypoplasia  
