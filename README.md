@@ -1,23 +1,22 @@
-# LympClear
-Improving Diagnostic Precision for Lower Limb Lymphedema: Suppressing Vein Signal Interference Using Deep Learning in MR Lymphangiography
-
-# LympClear: Deep Learning for Vein Suppression in MRL
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxx.svg)](https://doi.org/10.xxxx/zenodo.xxxxxx)  # 可选（若同步发布数据集）
-
 # LympClear: Deep Learning for Venous Signal Suppression in MR Lymphangiography
+
+> Improving Diagnostic Precision for Lower Limb Lymphedema: Suppressing Vein Signal Interference Using Deep Learning in MR Lymphangiography
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxx.svg)](https://doi.org/10.xxxx/zenodo.xxxxxx) <!-- 可选：同步发布数据或代码时 -->
+
+---
 
 ![LympClear Workflow](figures/workflow.png)
 
 ## 🧠 Overview
 
-**LympClear** is a deep learning–based framework developed to suppress venous signal interference in Magnetic Resonance Lymphangiography (MRL), significantly enhancing diagnostic accuracy for **lower extremity lymphedema (LE)**. This project introduces a novel signal suppression approach, dynamic image generation pipeline, and a lymphatic development grading system to improve anatomical clarity and aid clinical decision-making.
+**LympClear** is a deep learning–based framework developed to suppress venous signal interference in Magnetic Resonance Lymphangiography (MRL), significantly enhancing diagnostic accuracy for **lower extremity lymphedema (LE)**. This project introduces a novel signal suppression approach, dynamic image generation pipeline, and a lymphatic development grading system to improve anatomical clarity and support clinical decision-making.
 
 ---
 
 ## 🔍 Background
 
-MRL is commonly used for LE diagnosis, but high-intensity venous signals often obscure lymphatic structures, making interpretation difficult and time-consuming. LympClear addresses this issue using a model trained with a **brightness-matching technique**, based on the **nnUNet** architecture, to automatically remove venous signals and enhance lymphatic visibility.
+MRL is widely used for LE diagnosis, but high-intensity venous signals often obscure lymphatic structures. LympClear solves this with a **brightness-matching enhanced nnUNet model**, enabling accurate vein suppression, improved visualization, and faster, more reliable interpretation.
 
 ---
 
@@ -25,12 +24,28 @@ MRL is commonly used for LE diagnosis, but high-intensity venous signals often o
 
 - 🧠 **Model**: Custom-trained nnUNet with brightness-matching strategy  
 - 🧪 **Dataset**: 1022 patients, 6162 dynamic scans, multi-center, 2007–2024  
-- 🎞 **Output**: High-quality static and dynamic MRL images  
-- 📈 **Clinical Value**: Improved diagnosis, reduced reading time, enhanced consistency
+- 🎞 **Output**: Cleaned MRL, dynamic flow GIFs, structural grading  
+- 📈 **Clinical Impact**: Faster reading, higher diagnostic consistency, more confident planning  
 
 ---
 
-## 📊 Results
+## 🎞 Dynamic Visualization Examples
+
+> Below are dynamic MRL sequences generated with LympClear. Vein suppression enhances contrast flow clarity and supports temporal interpretation.
+
+### Example 1
+![GIF 1](test1041.gif)
+
+### Example 2
+![GIF 2](test1046.gif)
+
+### Example 3
+![GIF 3](test1060.gif)
+
+
+---
+
+## 📊 Quantitative Results
 
 | Metric                          | Before LympClear | After LympClear |
 |---------------------------------|------------------|-----------------|
@@ -45,7 +60,7 @@ MRL is commonly used for LE diagnosis, but high-intensity venous signals often o
 
 ---
 
-## 🧬 Method
+## 🧬 Methodology
 
 <p align="center">
   <img src="figures/model_architecture.png" width="600"/>
@@ -53,56 +68,55 @@ MRL is commonly used for LE diagnosis, but high-intensity venous signals often o
 
 1. **Input**: 3D dynamic MRL scans  
 2. **Preprocessing**: Normalization, registration, manual vein annotation  
-3. **Training**: nnUNet + brightness matching for venous signal suppression  
+3. **Training**: nnUNet with brightness matching  
 4. **Output**:  
-   - Cleaned MRL images (vein-free)  
-   - Dynamic visualization of contrast agent flow  
+   - Vein-free MRL images  
+   - Dynamic contrast agent flow GIFs  
    - Lymphatic development grading  
+
+---
+
+## 🧪 Lymphatic Development Grading System
+
+> **Table x. Lymphatic Development Grading System**
+
+| Grade       | Development Status     | Imaging Characteristics |
+|-------------|------------------------|--------------------------|
+| **Grade I** | Aplasia                | Extremely sparse or nearly invisible lymphatic signals; maximum vessel diameter is very small (<2 mm), branching density approaches zero, with almost no abnormal collateral circulation. |
+| **Grade II**| Hypoplasia             | Continuous lymph vessels <5, maximum diameter between 2–3 mm, slightly reduced branching density, only very few abnormal collateral vessels. Relatively low dilation rate (<10%). |
+| **Grade III**| Hyperplasia           | Continuous lymph vessels >7, increased diameter (e.g., ≥4 mm), with alternating segments of significant dilation or narrowing; increased branching density and presence of multiple abnormal collateral vessels; moderate or higher dilation rate (≥30%). |
+| **Grade IV**| Severe Hyperplasia     | Highly dilated or clustered tortuous vessels, maximum diameter possibly >6 mm or larger; extremely high branching density, abundant abnormal collateral circulation; very high dilation rate (e.g., ≥50%), often accompanied by severe clinical symptoms. |
+
+
+### Grade I: Aplasia
+![Grade I](zeromip_image_comparison_vein_10716_0000.nii.png)  
+*Extremely sparse lymphatic signals, <2 mm in diameter, minimal branching.*
+
+### Grade II: Hypoplasia
+![Grade II](zeromip_image_comparison_vein_10394_0000.nii.png)  
+*Sparse vessels, slight dilation (2–3 mm), few abnormal collaterals.*
+
+### Grade III: Hyperplasia
+![Grade III](zeromip_image_comparison_vein_10043_0000.nii.png)  
+*Thickened and tortuous vessels (≥4 mm), moderate collaterals.*
+
+### Grade IV: Severe Hyperplasia
+![Grade IV](zeromip_image_comparison_vein_10897_0000.nii.png)  
+*Severely dilated and clustered lymphatic network, extensive collateral flow.*
+
 
 ---
 
 ## 📦 Repository Structure
 
-
-
-## 🚀 核心功能
-- **静脉信号抑制**: Dice 系数 0.940，阅读时间减少 87%  
-- **淋巴发育分级**: 与临床分期强相关（Kappa 0.91）  
-- **动态可视化**: 对比剂时空流动展示（见 `notebooks/`）  
-
-## Lymphatic Development Grading System
-
-| Grade       | Description        | Visualization                      |
-|-------------|--------------------|------------------------------------|
-| **Grade I** | Aplasia            | ![Grade I](figures/grade_i.png)    |
-| **Grade II**| Hypoplasia         | ![Grade II](figures/grade_ii.png)  |
-| **Grade III**| Hyperplasia        | ![Grade III](figures/grade_iii.png)|
-| **Grade IV**| Severe Hyperplasia | ![Grade IV](figures/grade_iv.png)  |
-
-## Lymphatic Development Grading System
-
-### Grade I: Aplasia
-![Grade I](zeromip_image_comparison_vein_10716_0000.nii.png)  
-*图示：淋巴管发育不良（Aplasia）*
-
-### Grade II: Hypoplasia  
-![Grade II](zeromip_image_comparison_vein_10394_0000.nii.png)  
-*图示：淋巴管发育不全（Hypoplasia）*
-
-### Grade III: Hyperplasia  
-![Grade III](zeromip_image_comparison_vein_10043_0000.nii.png)  
-*图示：淋巴管增生（Hyperplasia）*
-
-### Grade IV: Severe Hyperplasia  
-![Grade IV](zeromip_image_comparison_vein_10897_0000.nii.png)  
-*图示：淋巴管严重增生（Severe Hyperplasia）*
-
-
-## 📄 引用
-```bibtex
-@article{yourname2024lympclear,
-  title={Improving Diagnostic Precision for Lower Limb Lymphedema...},
-  author={Your Name, et al.},
-  journal={Journal of Medical Imaging},
-  year={2024}
-}
+```bash
+LympClear/
+├── README.md                  # 项目介绍（本文件）
+├── figures/                   # 模型结构图、流程图、分级图
+├── gifs/                      # 动图展示（test1041.gif 等）
+├── src/                       # 模型代码、训练和推理脚本
+├── model/                     # 训练好的模型权重（可选上传）
+├── dataset/                   # 数据说明或样例（如可公开）
+├── notebooks/                 # 分析脚本或演示代码
+├── requirements.txt           # 环境依赖
+└── LICENSE
