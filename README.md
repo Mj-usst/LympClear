@@ -71,7 +71,7 @@ MRL is widely used for LE diagnosis, but high-intensity venous signals often obs
 3. **Training**: nnUNet with brightness matching  
 4. **Output**:  
    - Vein-free MRL images  
-   - Dynamic contrast agent flow GIFs  
+   - Dynamic contrast agent flow GIFs   
    - Lymphatic development grading  
 
 ---
