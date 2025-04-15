@@ -6,7 +6,7 @@
 
 ---
 
-![LympClear Workflow](figures/workflow.png)
+![LympClear Workflow](幻灯片9.JPG)
 
 ## 🧠 Overview
 
