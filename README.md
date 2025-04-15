@@ -113,10 +113,10 @@ MRL is widely used for LE diagnosis, but high-intensity venous signals often obs
 LympClear/
 ├── README.md                  # 项目介绍（本文件）
 ├── figures/                   # 模型结构图、流程图、分级图
-├── gifs/                      # 动图展示（test1041.gif 等）
+├── gifs/                      # 动图展示
 ├── src/                       # 模型代码、训练和推理脚本
-├── model/                     # 训练好的模型权重（可选上传）
-├── dataset/                   # 数据说明或样例（如可公开）
+├── model/                     # 训练好的模型权重
+├── dataset/                   # 数据说明或样例
 ├── notebooks/                 # 分析脚本或演示代码
 ├── requirements.txt           # 环境依赖
 └── LICENSE
