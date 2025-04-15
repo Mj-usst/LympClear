@@ -5,8 +5,65 @@ Improving Diagnostic Precision for Lower Limb Lymphedema: Suppressing Vein Signa
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxx.svg)](https://doi.org/10.xxxx/zenodo.xxxxxx)  # 可选（若同步发布数据集）
 
-> **Abstract**  
-> 此处粘贴你的摘要（精简至 3-5 行）。
+# LympClear: Deep Learning for Venous Signal Suppression in MR Lymphangiography
+
+![LympClear Workflow](figures/workflow.png)
+
+## 🧠 Overview
+
+**LympClear** is a deep learning–based framework developed to suppress venous signal interference in Magnetic Resonance Lymphangiography (MRL), significantly enhancing diagnostic accuracy for **lower extremity lymphedema (LE)**. This project introduces a novel signal suppression approach, dynamic image generation pipeline, and a lymphatic development grading system to improve anatomical clarity and aid clinical decision-making.
+
+---
+
+## 🔍 Background
+
+MRL is commonly used for LE diagnosis, but high-intensity venous signals often obscure lymphatic structures, making interpretation difficult and time-consuming. LympClear addresses this issue using a model trained with a **brightness-matching technique**, based on the **nnUNet** architecture, to automatically remove venous signals and enhance lymphatic visibility.
+
+---
+
+## 🚀 Highlights
+
+- 🧠 **Model**: Custom-trained nnUNet with brightness-matching strategy  
+- 🧪 **Dataset**: 1022 patients, 6162 dynamic scans, multi-center, 2007–2024  
+- 🎞 **Output**: High-quality static and dynamic MRL images  
+- 📈 **Clinical Value**: Improved diagnosis, reduced reading time, enhanced consistency
+
+---
+
+## 📊 Results
+
+| Metric                          | Before LympClear | After LympClear |
+|---------------------------------|------------------|-----------------|
+| Dice for vein segmentation      | N/A              | **0.940**       |
+| Image quality (1–10)            | 6.7 ± 1.1        | **7.5 ± 0.9**   |
+| Vein removal clarity            | 5.8 ± 1.2        | **8.8 ± 0.7**   |
+| Lymphatic visibility            | 6.0 ± 1.3        | **8.3 ± 1.0**   |
+| Radiologist reading time        | Baseline         | **↓ 87%**       |
+| Reflux detection improvement    | -                | **↑ 18.7%**     |
+| Missed diagnosis rate           | 15.4%            | **7.2%**        |
+| Cohen’s Kappa (diagnostic κ)    | 0.65             | **0.91**        |
+
+---
+
+## 🧬 Method
+
+<p align="center">
+  <img src="figures/model_architecture.png" width="600"/>
+</p>
+
+1. **Input**: 3D dynamic MRL scans  
+2. **Preprocessing**: Normalization, registration, manual vein annotation  
+3. **Training**: nnUNet + brightness matching for venous signal suppression  
+4. **Output**:  
+   - Cleaned MRL images (vein-free)  
+   - Dynamic visualization of contrast agent flow  
+   - Lymphatic development grading  
+
+---
+
+## 📦 Repository Structure
+
+
 
 ## 🚀 核心功能
 - **静脉信号抑制**: Dice 系数 0.940，阅读时间减少 87%  
@@ -39,6 +96,7 @@ Improving Diagnostic Precision for Lower Limb Lymphedema: Suppressing Vein Signa
 ### Grade IV: Severe Hyperplasia  
 ![Grade IV](zeromip_image_comparison_vein_10897_0000.nii.png)  
 *图示：淋巴管严重增生（Severe Hyperplasia）*
+
 
 ## 📄 引用
 ```bibtex
