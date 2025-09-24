@@ -45,21 +45,6 @@ MRL is widely used for LE diagnosis, but high-intensity venous signals often obs
 
 ---
 
-## 📊 Quantitative Results
-
-| Metric                          | Before LympClear | After LympClear |
-|---------------------------------|------------------|-----------------|
-| Dice for vein segmentation      | N/A              | **0.940**       |
-| Image quality (1–10)            | 6.7 ± 1.1        | **7.5 ± 0.9**   |
-| Vein removal clarity            | 5.8 ± 1.2        | **8.8 ± 0.7**   |
-| Lymphatic visibility            | 6.0 ± 1.3        | **8.3 ± 1.0**   |
-| Radiologist reading time        | Baseline         | **↓ 87%**       |
-| Reflux detection improvement    | -                | **↑ 18.7%**     |
-| Missed diagnosis rate           | 15.4%            | **7.2%**        |
-| Cohen’s Kappa (diagnostic κ)    | 0.65             | **0.91**        |
-
----
-
 ## 🧬 Methodology
 
 <p align="center">
