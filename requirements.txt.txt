@@ -1,0 +1,42 @@
+# ---- core scientific ----
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+scikit-image==0.24.0
+scikit-learn==1.5.1
+matplotlib==3.9.2
+tqdm==4.66.5
+pyyaml==6.0.2
+requests==2.32.3
+
+# ---- medical imaging I/O ----
+nibabel==5.2.1
+pydicom==2.4.4
+dicom2nifti==2.4.11
+SimpleITK==2.4.0
+python-gdcm==3.0.24.1
+
+# ---- image/video utils ----
+opencv-python==4.11.0.86
+imageio==2.35.1
+imagecodecs==2024.6.1
+pillow==10.4.0
+
+# ---- nnUNet / training deps ----
+nnunetv2==2.5.1
+batchgenerators==0.25
+batchgeneratorsv2==0.2.1
+acvl-utils==0.2
+dynamic-network-architectures==0.3.1
+fft-conv-pytorch==1.2.0
+
+# ---- optional but common (keep if your code imports them) ----
+einops==0.8.0
+timm==1.0.11
+fvcore==0.1.5.post20221221
+iopath==0.1.10
+yacs==0.1.8
+medpy==0.5.2
+connected-components-3d==3.18.0
+openpyxl==3.1.5
+tabulate==0.9.0
