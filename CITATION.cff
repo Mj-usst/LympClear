@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: LympClear
+message: "If you use this software, please cite it using the metadata in this file."
+type: software
+authors:
+  - family-names: Ma
+    given-names: Jian
+repository-code: "https://github.com/Mj-usst/LympClear"
+url: "https://github.com/Mj-usst/LympClear"
+abstract: "Open-source inference and visualization workflow for venous signal suppression in MR lymphangiography."
+keywords:
+  - medical imaging
+  - MR lymphangiography
+  - venous suppression
+  - nnUNet
+license: "Apache-2.0"
+version: 0.3.0
+date-released: 2026-03-16

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+env/
+conda-env/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large data and outputs
+*.nii
+*.nii.gz
+*.nrrd
+*.dcm
+*.zip
+*.tar
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.npz
+*.npy
+*.h5
+*.pkl
+*.log
+
+# Project outputs
+dataset/upload/
+dataset/infer_nii/
+dataset/infer_result/
+dataset/MIP/
+dataset/GIF/
+dataset/nrrd/
+outputs/
+logs/
+
+# nnUNet cache / results
+nnUNet_raw/
+nUNet_preprocessed/
+nUNet_results/
