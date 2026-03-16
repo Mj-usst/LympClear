@@ -156,21 +156,18 @@ Each folder under `dataset/upload/` is expected to contain one DICOM series.
 No. This package is structured for public release and **does not include raw clinical data, labels, or annotations**.
 
 ### 2. Does it include trained model weights?
-Weights should be released through **GitHub Releases** rather than regular repository commits. See [`MODEL_ZOO.md`](MODEL_ZOO.md).
+yes
 
 ### 3. Which scripts should external users start with?
 Use the cleaned scripts under `scripts/`. The `Data_preprocessing/` folder contains original research utilities kept mainly for traceability.
 
-### 4. Why are `nnUNet` and `dynamic-network-architectures` included here?
-They appear to be vendored snapshots used in the original project. Before public release, confirm that bundling them matches their licenses and your intended distribution method.
-
-### 5. Can others reproduce the full paper results from this repository alone?
+### 4. Can others reproduce the full paper results from this repository alone?
 Usually not yet. Full reproducibility would additionally require standardized training instructions, model weights, dataset access policy, and exact experiment settings.
 
-### 6. Should I keep the `Figures/` folder as-is?
+### 5. Should I keep the `Figures/` folder as-is?
 Only after checking that all media are publication-safe, shareable, de-identified, and copyright-compliant.
 
-### 7. There is no paper yet. How should users cite this project?
+### 6. There is no paper yet. How should users cite this project?
 Use the software citation metadata in `CITATION.cff` for now, and update it later when a manuscript or preprint becomes available.
 
 ## Roadmap
