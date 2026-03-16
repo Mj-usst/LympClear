@@ -9,8 +9,6 @@ Deep learning workflow utilities for **venous signal suppression in MR lymphangi
 
 > This repository provides a cleaned, public-facing project structure for the LympClear inference and visualization pipeline. **Raw clinical data, annotations, and trained model weights are not tracked inside the Git repository.** Model checkpoints should be distributed through **GitHub Releases**.
 
-Repository: https://github.com/Mj-usst/LympClear
-
 ---
 
 ## Table of contents
@@ -98,7 +96,7 @@ python scripts/convert_dicom_to_nifti.py   --input-dir dataset/upload   --output
 ### Run nnUNet inference
 
 ```bash
-nnUNetv2_predict   -d Dataset112_Vein   -i dataset/infer_nii/result   -o dataset/infer_result   -f 3   -tr nnUNetTrainer   -c 3d_fullres   -p nnUNetPlans
+nnUNetv2_predict   -d Dataset112_Vein   -i dataset/infer_nii   -o dataset/infer_result   -f 0   -tr nnUNetTrainer   -c 3d_fullres   -p nnUNetPlans
 ```
 
 ### Generate MIP panels
@@ -116,7 +114,7 @@ python scripts/build_gif.py   --image-dir dataset/MIP   --output dataset/GIF/lym
 ### One-command helper
 
 ```bash
-bash scripts/run_inference.sh dataset/upload dataset Dataset112_Vein 3
+bash scripts/run_inference.sh dataset/upload dataset Dataset112_Vein 0
 ```
 
 ## Model weights
