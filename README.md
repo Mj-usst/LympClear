@@ -128,7 +128,7 @@ nnUNetv2_predict \
 
 ```bash
 python scripts/generate_mip.py \
-  --image-dir dataset/infer_nii \
+  --image-dir dataset/infer_nii/result \
   --label-dir dataset/infer_result \
   --output-dir dataset/MIP
 ```
@@ -216,8 +216,6 @@ See [CHANGELOG.md](CHANGELOG.md).
 ## License
 
 This repository is released under the **Apache License 2.0**. See [LICENSE](LICENSE).
-
-## Acknowledgements
 
 ## Acknowledgements
 
