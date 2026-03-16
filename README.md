@@ -119,20 +119,7 @@ bash scripts/run_inference.sh dataset/upload dataset Dataset112_Vein 0
 
 ## Model weights
 
-**Recommended release strategy: GitHub Releases, not regular Git commits.**
-
-Do not commit `.pth`, `.pt`, `.ckpt`, or other large checkpoint files into the normal repository history. Instead:
-
-1. Create a GitHub Release such as `v0.3.0`.
-2. Upload the checkpoint file as a release asset.
-3. Document the asset name, expected checksum, and compatible command line in [`MODEL_ZOO.md`](MODEL_ZOO.md).
-
-Suggested release asset naming:
-
-```text
-LympClear_Dataset112_fold3_best.pth
-LympClear_inference_demo.zip
-```
+Please see the Releases page and `MODEL_ZOO.md` for download links and usage details.
 
 ## Expected data layout
 
