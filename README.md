@@ -73,11 +73,11 @@ LympClear/
 
 ## Example outputs
 
-### MIP overview
-![MIP overview](Figures/001_combined_mip.png)
+### Example venous suppression comparison1
+![MIP overview](Figures/test.1041.gif)
 
-### Example venous suppression comparison
-![Venous suppression example](Figures/zeromip_image_comparison_vein_10394_0000.nii.png)
+### Example venous suppression comparison2
+![Venous suppression example](Figures/test.1060.gif)
 
 ## Installation
 
