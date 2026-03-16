@@ -219,4 +219,8 @@ This repository is released under the **Apache License 2.0**. See [LICENSE](LICE
 
 ## Acknowledgements
 
-This repository includes snapshots of upstream components such as nnUNet and dynamic-network-architectures. Their original licenses and attributions are preserved in the repository and should be respected in downstream use.
+## Acknowledgements
+
+We sincerely thank all contributors who participated in the venous data annotation process for this project. Their careful labeling work provided essential support for dataset preparation, model development, and qualitative evaluation.
+
+This repository also includes snapshots of upstream components such as nnUNet and dynamic-network-architectures. Their original licenses and attributions are preserved in the repository and should be respected in downstream use.
