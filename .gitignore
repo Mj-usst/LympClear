@@ -47,5 +47,5 @@ logs/
 
 # nnUNet cache / results
 nnUNet_raw/
-nUNet_preprocessed/
+nnUNet_preprocessed/
 nUNet_results/
