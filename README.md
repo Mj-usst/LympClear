@@ -116,7 +116,7 @@ python scripts/convert_dicom_to_nifti.py \
 ```bash
 nnUNetv2_predict \
   -d Dataset112_Vein \
-  -i dataset/infer_nii \
+  -i dataset/infer_nii/result \
   -o dataset/infer_result \
   -f 0 \
   -tr nnUNetTrainer \
