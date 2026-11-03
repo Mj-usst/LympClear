@@ -7,6 +7,8 @@
 
 LympClear is a research-oriented deep learning framework for **venous signal suppression in MR lymphangiography (MRL)**.
 
+**Published in Radiology (2026):** Ma J, Gong X, et al. *MR Lymphangiography for Diagnosis of Lower Extremity Lymphedema: Suppressing Venous Signal Interference Using Deep Learning.* [Paper](https://doi.org/10.1148/radiol.251225) · [PubMed](https://pubmed.ncbi.nlm.nih.gov/42334351/).
+
 > For research use only. This repository does **not** include raw clinical data or annotations. Pretrained model weights are distributed through **GitHub Releases**, not regular Git commits.
 
 ---
@@ -42,12 +44,12 @@ This repository currently focuses on:
 
 ## Highlights
 
-- Cleaned command-line workflow for inference-related preprocessing and visualization
-- Public-facing documentation suitable for GitHub release
-- Apache-2.0 licensed for open-source distribution
-- Safer repository defaults for medical-imaging projects via `.gitignore`
-- Preserved original research scripts for traceability under `Data_preprocessing/`
-- Added release notes, FAQ, citation metadata, changelog, and GitHub templates
+- Research code accompanying the published Radiology study
+- nnU-Net-based venous mask prediction workflow
+- DICOM-to-NIfTI conversion, MIP comparisons, and GIF previews
+- Public pretrained checkpoint available in the v0.3.0 release
+- Original research scripts preserved for traceability under `Data_preprocessing/`
+- Apache-2.0 licensed project code with upstream attributions retained
 
 ## Repository structure
 
@@ -151,7 +153,7 @@ bash scripts/run_inference.sh dataset/upload dataset Dataset112_Vein 0
 
 Pretrained model weights are distributed via **GitHub Releases** rather than regular Git commits.
 
-Please see the Releases page and [MODEL_ZOO.md](MODEL_ZOO.md) for download links and usage details.
+The [v0.3.0 release](https://github.com/Mj-usst/LympClear/releases/tag/v0.3.0) includes [`checkpoint_best.pth`](https://github.com/Mj-usst/LympClear/releases/download/v0.3.0/checkpoint_best.pth). See [MODEL_ZOO.md](MODEL_ZOO.md) for the download, checksum, and setup notes.
 
 ## Expected data layout
 
@@ -192,22 +194,22 @@ Usually not yet. Full reproducibility would additionally require standardized tr
 ### 5. Should I keep the `Figures/` folder as-is?
 Only after checking that all media are shareable, de-identified, and suitable for public release.
 
-### 6. There is no paper yet. How should users cite this project?
-Please cite this project as software using the metadata provided in `CITATION.cff`. A manuscript or preprint citation can be added later.
+### 6. How should users cite this project?
+Please cite the associated [Radiology article](https://doi.org/10.1148/radiol.251225). Software and article citation metadata are provided in [CITATION.cff](CITATION.cff).
 
 ## Roadmap
 
-- Add public checkpoint assets to GitHub Releases
-- Add reproducible training guide
-- Add de-identified demo examples if permitted
-- Add automated smoke tests for scripts
-- Add GitHub Actions workflow
+- [x] Publish a pretrained checkpoint in GitHub Releases (v0.3.0)
+- [ ] Add reproducible training guide
+- [ ] Add de-identified demo examples if permitted
+- [ ] Add automated smoke tests for scripts
+- [ ] Add GitHub Actions workflow
 
 ## Citation
 
-Please cite this repository as software using the metadata provided in `CITATION.cff`.
+Ma J, Gong X, Zhang J, et al. **MR Lymphangiography for Diagnosis of Lower Extremity Lymphedema: Suppressing Venous Signal Interference Using Deep Learning.** *Radiology.* 2026;319(3):e251225. [doi:10.1148/radiol.251225](https://doi.org/10.1148/radiol.251225).
 
-A manuscript or preprint citation can be added later when available.
+Jian Ma and Xiuru Gong contributed equally. See [CITATION.cff](CITATION.cff) for machine-readable software and article metadata.
 
 ## Changelog
 
