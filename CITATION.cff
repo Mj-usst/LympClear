@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: LympClear
-message: "If you use this software, please cite it using the metadata in this file."
+message: "If you use LympClear, please cite the associated Radiology article and this software."
 type: software
 authors:
   - family-names: Ma
@@ -16,3 +16,37 @@ keywords:
 license: "Apache-2.0"
 version: 0.3.0
 date-released: 2026-03-16
+preferred-citation:
+  type: article
+  title: "MR Lymphangiography for Diagnosis of Lower Extremity Lymphedema: Suppressing Venous Signal Interference Using Deep Learning"
+  authors:
+    - family-names: Ma
+      given-names: Jian
+    - family-names: Gong
+      given-names: Xiuru
+    - family-names: Zhang
+      given-names: Jianqing
+    - family-names: Zhu
+      given-names: Honglin
+    - family-names: Dai
+      given-names: Gonghua
+    - family-names: Chen
+      given-names: Chuanzhi
+    - family-names: Du
+      given-names: Yehong
+    - family-names: Xu
+      given-names: Wen
+    - family-names: Li
+      given-names: Zhiyu
+    - family-names: Li
+      given-names: Yuqiao
+    - family-names: Lu
+      given-names: Qing
+  journal: Radiology
+  year: 2026
+  month: 6
+  volume: "319"
+  issue: "3"
+  start: "e251225"
+  doi: "10.1148/radiol.251225"
+  url: "https://pubmed.ncbi.nlm.nih.gov/42334351/"
