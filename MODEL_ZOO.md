@@ -1,34 +1,18 @@
 # Model Zoo
 
-This project recommends distributing trained checkpoints through **GitHub Releases** rather than committing large binary files into the Git history.
+Pretrained checkpoints are distributed through [GitHub Releases](https://github.com/Mj-usst/LympClear/releases), separately from the source-code history.
 
-## Recommended release pattern
+## Available checkpoint
 
-For each public model version:
+- **Release:** [v0.3.0](https://github.com/Mj-usst/LympClear/releases/tag/v0.3.0)
+- **File:** [`checkpoint_best.pth`](https://github.com/Mj-usst/LympClear/releases/download/v0.3.0/checkpoint_best.pth)
+- **Task:** Venous segmentation for MR lymphangiography
+- **Framework:** nnU-Net v2
+- **Size:** 362,948,198 bytes
+- **SHA-256 (GitHub release asset metadata):** `8eea166265639f49288471dcfca9ea526069aadf8996ba619e44ac2c5c686942`
 
-1. Create a GitHub Release tag, for example `v0.3.0`.
-2. Upload the model checkpoint as a release asset.
-3. Record the following metadata in this file.
+## Setup notes
 
-## Template
+The release currently provides a checkpoint file. nnU-Net inference also requires compatible plans, dataset metadata, and model-directory configuration; the checkpoint alone is not a complete inference bundle. See the [README](README.md#quick-start) for the workflow and configure the matching model artifacts before inference.
 
-```text
-Model name: LympClear_Dataset112_fold3_best.pth
-Task: Venous suppression / segmentation inference
-Framework: nnUNet v2
-Input: NIfTI converted from DICOM MRL series
-Compatible release: v0.3.0
-SHA256: <fill-after-upload>
-Notes: <optional>
-Download: <GitHub Releases asset URL>
-```
-
-## Suggested assets
-
-- `LympClear_Dataset112_fold3_best.pth`
-- `LympClear_inference_demo.zip`
-
-## Notes
-
-- Avoid pushing checkpoints directly into the main repository history.
-- If you later host models elsewhere, keep this file as the index page and link out.
+Clinical images and annotations are not included. An inference-demo bundle is not currently listed among the v0.3.0 release assets.
